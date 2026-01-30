@@ -6,6 +6,8 @@ public class Player : MonoBehaviour
 {
     [Header("References")]
     private Rigidbody2D rb;
+    private Animator anim;
+
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private TrailRenderer tr;
@@ -13,6 +15,7 @@ public class Player : MonoBehaviour
     [Header("Movement")]
     public float speed = 10f;
     private Vector2 moveInput;
+    private bool facingRight = true;
 
     [Header("Jump")]
     public float jumpForce = 6f;
@@ -21,13 +24,15 @@ public class Player : MonoBehaviour
     [Header("Dash")]
     private bool canDash = true;
     private bool isDashing;
+
     [SerializeField] private float dashPower = 25f;
-    [SerializeField] private float dashDuration = 0.25f;     // ?? 1 segundo
+    [SerializeField] private float dashDuration = 0.25f;   // 👈 duración REAL
     [SerializeField] private float dashCooldown = 1f;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     private void Update()
@@ -37,56 +42,74 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (isDashing) return; // no movimiento normal durante dash
+        if (isDashing) return;
         Move();
     }
 
+    // ---------------- MOVIMIENTO ----------------
     void Move()
     {
         rb.linearVelocity = new Vector2(moveInput.x * speed, rb.linearVelocity.y);
 
-        // Girar personaje seg�n direcci�n
-        if (moveInput.x != 0)
-        {
-            transform.localScale = new Vector3(Mathf.Sign(moveInput.x), 1, 1);
-        }
+        if (moveInput.x > 0 && !facingRight) Flip();
+        else if (moveInput.x < 0 && facingRight) Flip();
+
+        anim.SetFloat("Speed", Mathf.Abs(moveInput.x));
     }
 
+    void Flip()
+    {
+        facingRight = !facingRight;
+        transform.localScale = new Vector3(
+            transform.localScale.x * -1,
+            transform.localScale.y,
+            transform.localScale.z
+        );
+    }
+
+    // ---------------- SALTO ----------------
     void Jump()
     {
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
         rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        anim.SetTrigger("Jump");
     }
 
+    // ---------------- DASH POR DURACIÓN ----------------
     IEnumerator Dash()
     {
         canDash = false;
         isDashing = true;
 
+        anim.SetBool("Dash", true);
+
         float originalGravity = rb.gravityScale;
         rb.gravityScale = 0f;
 
-        // Direcci�n a la que mira el personaje
-        float dashDirection = transform.localScale.x;
-
+        float dashDirection = facingRight ? 1f : -1f;
         tr.emitting = true;
 
-        float elapsedTime = 0f;
-        while (elapsedTime < dashDuration)
+        float timer = 0f;
+        while (timer < dashDuration)
         {
             rb.linearVelocity = new Vector2(dashDirection * dashPower, 0f);
-            elapsedTime += Time.deltaTime;
+            timer += Time.deltaTime;
             yield return null;
         }
 
-        tr.emitting = false;
+        // FIN DEL DASH
         rb.gravityScale = originalGravity;
+        rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
+
+        tr.emitting = false;
+        anim.SetBool("Dash", false);
         isDashing = false;
 
         yield return new WaitForSeconds(dashCooldown);
         canDash = true;
     }
 
+    // ---------------- GROUND CHECK ----------------
     private void CheckGround()
     {
         isGrounded = Physics2D.OverlapCircle(
@@ -94,9 +117,11 @@ public class Player : MonoBehaviour
             0.25f,
             groundLayer
         );
+
+        anim.SetBool("Grounded", isGrounded);
     }
 
-    #region Input System
+    // ---------------- INPUT SYSTEM ----------------
     public void OnMove(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<Vector2>();
@@ -105,10 +130,7 @@ public class Player : MonoBehaviour
     public void OnJump(InputAction.CallbackContext context)
     {
         if (!context.performed) return;
-        if (isGrounded)
-        {
-            Jump();
-        }
+        if (isGrounded) Jump();
     }
 
     public void OnDash(InputAction.CallbackContext context)
@@ -118,5 +140,4 @@ public class Player : MonoBehaviour
 
         StartCoroutine(Dash());
     }
-    #endregion
 }
