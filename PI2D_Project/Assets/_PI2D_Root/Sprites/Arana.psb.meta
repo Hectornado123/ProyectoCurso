@@ -111,9 +111,9 @@ ScriptedImporter:
     spriteBone:
     - name: bone_12
       guid: 3a95da3a475340d479b7bb857af29f96
-      position: {x: 54.774292, y: 231.3872, z: 0}
-      rotation: {x: 0, y: 0, z: 0.7605435, w: -0.64928705}
-      length: 222.10419
+      position: {x: 60.490356, y: 234.64441, z: 0}
+      rotation: {x: 0, y: 0, z: 0.76228184, w: -0.64724535}
+      length: 232.32166
       parentId: -1
       color:
         serializedVersion: 2
@@ -7670,9 +7670,9 @@ ScriptedImporter:
         rgba: 4294901888
     - name: bone_12
       guid: 3a95da3a475340d479b7bb857af29f96
-      position: {x: 149.34695, y: -80.263504, z: 0}
-      rotation: {x: 0, y: -0, z: 0.99999607, w: 0.0028103115}
-      length: 222.10419
+      position: {x: 153.43149, y: -85.42095, z: 0}
+      rotation: {x: 0, y: -0, z: 0.9999849, w: 0.0054917815}
+      length: 232.32167
       parentId: 4
       color:
         serializedVersion: 2
