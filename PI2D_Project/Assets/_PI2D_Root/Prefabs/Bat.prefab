@@ -13,12 +13,24 @@ PrefabInstance:
       value: Bat
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 71ca17eb4f9e7dd428371c50c780e06d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.25460455
+      objectReference: {fileID: 0}
+    - target: {fileID: -7552582706839291426, guid: 71ca17eb4f9e7dd428371c50c780e06d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.25460455
+      objectReference: {fileID: 0}
+    - target: {fileID: -7552582706839291426, guid: 71ca17eb4f9e7dd428371c50c780e06d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.25460455
+      objectReference: {fileID: 0}
+    - target: {fileID: -7552582706839291426, guid: 71ca17eb4f9e7dd428371c50c780e06d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.95
+      value: 12.64
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 71ca17eb4f9e7dd428371c50c780e06d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.31
+      value: 1.43
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 71ca17eb4f9e7dd428371c50c780e06d, type: 3}
       propertyPath: m_LocalPosition.z
