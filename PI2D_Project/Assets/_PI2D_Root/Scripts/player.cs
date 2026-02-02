@@ -1,13 +1,14 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.InputSystem;
-using System.Collections;
+using UnityEngine.Windows;
 
 public class Player : MonoBehaviour
 {
     [Header("References")]
     private Rigidbody2D rb;
     private Animator anim;
-
+    private Vector2 input;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private TrailRenderer tr;
@@ -16,7 +17,10 @@ public class Player : MonoBehaviour
     public float speed = 10f;
     private Vector2 moveInput;
     private bool facingRight = true;
-
+    [SerializeField] private float velocidadEscalar;
+    private BoxCollider2D boxCollider2D;
+    private float gravedadInicial;
+    private bool escalando;
     [Header("Jump")]
     public float jumpForce = 6f;
     private bool isGrounded;
@@ -29,10 +33,16 @@ public class Player : MonoBehaviour
     [SerializeField] private float dashDuration = 0.25f;   // 👈 duración REAL
     [SerializeField] private float dashCooldown = 1f;
 
+    
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        boxCollider2D = GetComponent<BoxCollider2D>();
+        isDashing = false;
+        escalando = false;
+        gravedadInicial = rb.gravityScale;
     }
 
     private void Update()
@@ -44,6 +54,8 @@ public class Player : MonoBehaviour
     {
         if (isDashing) return;
         Move();
+
+        Escalar();
     }
 
     // ---------------- MOVIMIENTO ----------------
@@ -51,11 +63,15 @@ public class Player : MonoBehaviour
     {
         rb.linearVelocity = new Vector2(moveInput.x * speed, rb.linearVelocity.y);
 
-        if (moveInput.x > 0 && !facingRight) Flip();
-        else if (moveInput.x < 0 && facingRight) Flip();
+        if (!isDashing && !escalando)
+        {
+            if (moveInput.x > 0 && !facingRight) Flip();
+            else if (moveInput.x < 0 && facingRight) Flip();
+        }
 
-        anim.SetFloat("Speed", Mathf.Abs(moveInput.x));
+      //  anim.SetFloat("Speed", Mathf.Abs(moveInput.x));
     }
+
 
     void Flip()
     {
@@ -139,5 +155,35 @@ public class Player : MonoBehaviour
         if (!canDash || isDashing) return;
 
         StartCoroutine(Dash());
+    }
+
+    void Escalar()
+    {
+        bool tocandoEscalera = boxCollider2D.IsTouchingLayers(
+            LayerMask.GetMask("Escaleras")
+        );
+
+        if (tocandoEscalera && Mathf.Abs(moveInput.y) > 0.1f)
+        {
+            rb.gravityScale = 0f;
+
+            rb.linearVelocity = new Vector2(
+                rb.linearVelocity.x,
+                moveInput.y * velocidadEscalar
+            );
+
+            escalando = true;
+        }
+        else if (!tocandoEscalera)
+        {
+            rb.gravityScale = gravedadInicial;
+            escalando = false;
+        }
+
+        if (isGrounded)
+        {
+            rb.gravityScale = gravedadInicial;
+            escalando = false;
+        }
     }
 }
