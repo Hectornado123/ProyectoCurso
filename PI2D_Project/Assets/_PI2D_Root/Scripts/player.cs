@@ -134,7 +134,7 @@ public class Player : MonoBehaviour
             groundLayer
         );
 
-        anim.SetBool("Grounded", isGrounded);
+       // anim.SetBool("Grounded", isGrounded);
     }
 
     // ---------------- INPUT SYSTEM ----------------
