@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Windows;
 
 public class Player : MonoBehaviour
 {
@@ -34,6 +33,11 @@ public class Player : MonoBehaviour
     [SerializeField] private float dashDuration = 0.25f;
     [SerializeField] private float dashCooldown = 1f;
 
+    // --- NUEVAS VARIABLES PARA INTERACTUAR ---
+    [Header("Interaction")]
+    [SerializeField] private float interactionRange = 1.5f;
+    [SerializeField] private LayerMask interactableLayer;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -54,7 +58,7 @@ public class Player : MonoBehaviour
         if (isDashing) return;
 
         Move();
-        Escalar();
+        //Escalar();
     }
 
     // ---------------- MOVIMIENTO ----------------
@@ -120,6 +124,25 @@ public class Player : MonoBehaviour
         canDash = true;
     }
 
+    // ---------------- INTERACTUAR ----------------
+    void Interact()
+    {
+        Collider2D hit = Physics2D.OverlapCircle(
+            transform.position,
+            interactionRange,
+            interactableLayer
+        );
+
+        if (hit != null)
+        {
+            Switch sw = hit.GetComponent<Switch>();
+            if (sw != null)
+            {
+                sw.Activate();
+            }
+        }
+    }
+
     // ---------------- GROUND CHECK ----------------
     private void CheckGround()
     {
@@ -150,8 +173,16 @@ public class Player : MonoBehaviour
         StartCoroutine(Dash());
     }
 
+    public void OnInteract(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            Interact();
+        }
+    }
+
     // ---------------- ESCALAR (CORREGIDO) ----------------
-    void Escalar()
+    /*void Escalar()
     {
         bool tocandoEscalera = Physics2D.OverlapBox(
             transform.position,
@@ -180,6 +211,12 @@ public class Player : MonoBehaviour
             rb.gravityScale = gravedadInicial;
             escalando = false;
         }
-    }
+    }*/
 
+    // Visualizar el rango de interacción en el editor
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, interactionRange);
+    }
 }
