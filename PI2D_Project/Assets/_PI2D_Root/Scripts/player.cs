@@ -21,6 +21,7 @@ public class Player : MonoBehaviour
     private BoxCollider2D boxCollider2D;
     private float gravedadInicial;
     private bool escalando;
+
     [Header("Jump")]
     public float jumpForce = 6f;
     private bool isGrounded;
@@ -30,10 +31,8 @@ public class Player : MonoBehaviour
     private bool isDashing;
 
     [SerializeField] private float dashPower = 25f;
-    [SerializeField] private float dashDuration = 0.25f;   // 👈 duración REAL
+    [SerializeField] private float dashDuration = 0.25f;
     [SerializeField] private float dashCooldown = 1f;
-
-    
 
     private void Awake()
     {
@@ -53,8 +52,8 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         if (isDashing) return;
-        Move();
 
+        Move();
         Escalar();
     }
 
@@ -68,10 +67,7 @@ public class Player : MonoBehaviour
             if (moveInput.x > 0 && !facingRight) Flip();
             else if (moveInput.x < 0 && facingRight) Flip();
         }
-
-      //  anim.SetFloat("Speed", Mathf.Abs(moveInput.x));
     }
-
 
     void Flip()
     {
@@ -91,7 +87,7 @@ public class Player : MonoBehaviour
         anim.SetTrigger("Jump");
     }
 
-    // ---------------- DASH POR DURACIÓN ----------------
+    // ---------------- DASH ----------------
     IEnumerator Dash()
     {
         canDash = false;
@@ -113,7 +109,6 @@ public class Player : MonoBehaviour
             yield return null;
         }
 
-        // FIN DEL DASH
         rb.gravityScale = originalGravity;
         rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
 
@@ -133,8 +128,6 @@ public class Player : MonoBehaviour
             0.25f,
             groundLayer
         );
-
-       // anim.SetBool("Grounded", isGrounded);
     }
 
     // ---------------- INPUT SYSTEM ----------------
@@ -157,21 +150,23 @@ public class Player : MonoBehaviour
         StartCoroutine(Dash());
     }
 
+    // ---------------- ESCALAR (CORREGIDO) ----------------
     void Escalar()
     {
-        bool tocandoEscalera = boxCollider2D.IsTouchingLayers(
+        bool tocandoEscalera = Physics2D.OverlapBox(
+            transform.position,
+            boxCollider2D.size,
+            0f,
             LayerMask.GetMask("Escaleras")
         );
 
         if (tocandoEscalera && Mathf.Abs(moveInput.y) > 0.1f)
         {
             rb.gravityScale = 0f;
-
             rb.linearVelocity = new Vector2(
                 rb.linearVelocity.x,
                 moveInput.y * velocidadEscalar
             );
-
             escalando = true;
         }
         else if (!tocandoEscalera)
@@ -180,10 +175,11 @@ public class Player : MonoBehaviour
             escalando = false;
         }
 
-        if (isGrounded)
+        if (isGrounded && !tocandoEscalera)
         {
             rb.gravityScale = gravedadInicial;
             escalando = false;
         }
     }
+
 }
