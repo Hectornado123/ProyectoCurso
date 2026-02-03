@@ -2308,7 +2308,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1677432953
 Transform:
   m_ObjectHideFlags: 0
@@ -3187,6 +3187,10 @@ PrefabInstance:
       propertyPath: tr
       value: 
       objectReference: {fileID: 1771038861}
+    - target: {fileID: 7708482397903782955, guid: 1c6b2074b5631fb45b3242d55e3586d7, type: 3}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 9219667485985733160, guid: 1c6b2074b5631fb45b3242d55e3586d7, type: 3}
       propertyPath: m_Interpolate
       value: 1
@@ -3210,11 +3214,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1581728134382937646, guid: 5fe8924dff6a3fc4ab10c718db83075e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.131467
+      value: -1.94
       objectReference: {fileID: 0}
     - target: {fileID: 1581728134382937646, guid: 5fe8924dff6a3fc4ab10c718db83075e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.5383517
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 1581728134382937646, guid: 5fe8924dff6a3fc4ab10c718db83075e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3252,10 +3256,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainCamera
       objectReference: {fileID: 0}
+    - target: {fileID: 8659488416914440475, guid: 5fe8924dff6a3fc4ab10c718db83075e, type: 3}
+      propertyPath: orthographic size
+      value: 2.3
+      objectReference: {fileID: 0}
     - target: {fileID: 8977858116995618232, guid: 5fe8924dff6a3fc4ab10c718db83075e, type: 3}
       propertyPath: objetivo
       value: 
       objectReference: {fileID: 1557967250}
+    - target: {fileID: 8977858116995618232, guid: 5fe8924dff6a3fc4ab10c718db83075e, type: 3}
+      propertyPath: desplazamiento.x
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
