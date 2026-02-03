@@ -2719,6 +2719,14 @@ PrefabInstance:
       propertyPath: tr
       value: 
       objectReference: {fileID: 1771038861}
+    - target: {fileID: 9219667485985733160, guid: 1c6b2074b5631fb45b3242d55e3586d7, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9219667485985733160, guid: 1c6b2074b5631fb45b3242d55e3586d7, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

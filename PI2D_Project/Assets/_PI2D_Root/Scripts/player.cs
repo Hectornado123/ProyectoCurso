@@ -44,13 +44,13 @@ public class Player : MonoBehaviour
         anim = GetComponent<Animator>();
         boxCollider2D = GetComponent<BoxCollider2D>();
         isDashing = false;
-        escalando = false;
-        gravedadInicial = rb.gravityScale;
+        //escalando = false;
+        //gravedadInicial = rb.gravityScale;
     }
 
     private void Update()
     {
-        CheckGround();
+
     }
 
     private void FixedUpdate()
@@ -59,6 +59,7 @@ public class Player : MonoBehaviour
 
         Move();
         //Escalar();
+        CheckGround();
     }
 
     // ---------------- MOVIMIENTO ----------------
@@ -68,8 +69,9 @@ public class Player : MonoBehaviour
 
         if (!isDashing && !escalando)
         {
-            if (moveInput.x > 0 && !facingRight) Flip();
-            else if (moveInput.x < 0 && facingRight) Flip();
+            // Dead zone para evitar vibraciones
+            if (moveInput.x > 0.1f && !facingRight) Flip();
+            else if (moveInput.x < -0.1f && facingRight) Flip();
         }
     }
 
