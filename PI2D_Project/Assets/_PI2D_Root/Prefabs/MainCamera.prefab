@@ -151,5 +151,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraC
   objetivo: {fileID: 0}
-  velocidadCamara: 0.025
-  desplazamiento: {x: 0, y: 0, z: -10}
+  velocidadCamara: 0.005
+  desplazamiento: {x: 1.36, y: 1.48, z: -10}
