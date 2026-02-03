@@ -4,6 +4,9 @@ using TMPro;
 
 public class GuillotinaRotatoria : MonoBehaviour
 {
+
+
+  
     public float intervalo = 6f;
     public float anguloRotacion = 170f;
     public float velocidadRotacion = 2f;
@@ -25,7 +28,9 @@ public class GuillotinaRotatoria : MonoBehaviour
 
     void Update()
     {
+        Debug.Log("Update funcionando");
         tiempoRestante -= Time.deltaTime;
+
         contadorTexto.text = tiempoRestante.ToString("F1") + "s";
 
         if (tiempoRestante <= 0 && !atacando)
@@ -61,4 +66,5 @@ public class GuillotinaRotatoria : MonoBehaviour
 
         atacando = false;
     }
+    
 }
