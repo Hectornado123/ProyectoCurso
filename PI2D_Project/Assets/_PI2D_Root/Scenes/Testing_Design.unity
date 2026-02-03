@@ -618,6 +618,33 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &325306373 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2789006199371807656, guid: 310168f874dfba84ca48780ab1f7b76b, type: 3}
+  m_PrefabInstance: {fileID: 5851907980854589529}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &325306374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325306373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91f5bb2b0c52f2b45afb19ddfea2ccdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GuillotinaRotatoria
+  intervalo: 6
+  anguloRotacion: 170
+  velocidadRotacion: 2
+  contadorTexto: {fileID: 0}
+  saw: {fileID: 325306375}
+--- !u!4 &325306375 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7856363623683394142, guid: 310168f874dfba84ca48780ab1f7b76b, type: 3}
+  m_PrefabInstance: {fileID: 5851907980854589529}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &332500758
 GameObject:
   m_ObjectHideFlags: 0
@@ -2016,11 +2043,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1013654815737992004, guid: 1c6b2074b5631fb45b3242d55e3586d7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000056409583
+      value: -0.00000016027681
       objectReference: {fileID: 0}
     - target: {fileID: 2022130447230468685, guid: 1c6b2074b5631fb45b3242d55e3586d7, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.75942045
+      value: 0.7594204
       objectReference: {fileID: 0}
     - target: {fileID: 2022130447230468685, guid: 1c6b2074b5631fb45b3242d55e3586d7, type: 3}
       propertyPath: m_LocalRotation.z
@@ -2028,15 +2055,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3577987936059631498, guid: 1c6b2074b5631fb45b3242d55e3586d7, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.09798867
+      value: 0.097988896
       objectReference: {fileID: 0}
     - target: {fileID: 3852909943786713426, guid: 1c6b2074b5631fb45b3242d55e3586d7, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.032003503
+      value: -0.032003585
       objectReference: {fileID: 0}
     - target: {fileID: 3852909943786713426, guid: 1c6b2074b5631fb45b3242d55e3586d7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.9994878
+      value: 0.99948776
       objectReference: {fileID: 0}
     - target: {fileID: 5044176436282500693, guid: 1c6b2074b5631fb45b3242d55e3586d7, type: 3}
       propertyPath: m_Name
@@ -2044,7 +2071,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5975579907864798866, guid: 1c6b2074b5631fb45b3242d55e3586d7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.00000002431804
+      value: 0.0000000978487
       objectReference: {fileID: 0}
     - target: {fileID: 6253417864968601142, guid: 1c6b2074b5631fb45b3242d55e3586d7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2088,11 +2115,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7549324078698874421, guid: 1c6b2074b5631fb45b3242d55e3586d7, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.65339744
+      value: 0.6533974
       objectReference: {fileID: 0}
     - target: {fileID: 7549324078698874421, guid: 1c6b2074b5631fb45b3242d55e3586d7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.7570151
+      value: 0.75701517
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2371,7 +2398,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2789006199371807656, guid: 310168f874dfba84ca48780ab1f7b76b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 325306374}
   m_SourcePrefab: {fileID: 100100000, guid: 310168f874dfba84ca48780ab1f7b76b, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
