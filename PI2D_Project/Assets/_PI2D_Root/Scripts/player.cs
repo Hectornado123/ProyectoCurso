@@ -66,7 +66,8 @@ public class Player : MonoBehaviour
     void Move()
     {
         rb.linearVelocity = new Vector2(moveInput.x * speed, rb.linearVelocity.y);
-
+        bool isWalking = Mathf.Abs(moveInput.x) > 0.1f && isGrounded && !isDashing;
+        anim.SetBool("Walk", isWalking);
         if (!isDashing && !escalando)
         {
             // Dead zone para evitar vibraciones
@@ -90,7 +91,7 @@ public class Player : MonoBehaviour
     {
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
         rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-        anim.SetTrigger("Jump");
+        //anim.SetTrigger("Jump");
     }
 
     // ---------------- DASH ----------------
