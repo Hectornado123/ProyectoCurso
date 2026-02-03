@@ -7,12 +7,11 @@ public class Patrullar : MonoBehaviour
     [SerializeField] private Transform[] puntosMovimiento;
     [SerializeField] private float distanciaMinima;
 
-    private int numeroAleatorio;
+    private int siguientePaso = 0;
     private SpriteRenderer spriteRenderer;
 
     void Start()
     {
-        numeroAleatorio = Random.Range(0, puntosMovimiento.Length);
         spriteRenderer = GetComponent<SpriteRenderer>();
         Girar();
     }
@@ -20,18 +19,22 @@ public class Patrullar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, puntosMovimiento[numeroAleatorio].position, velocidadMovimiento * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, puntosMovimiento[siguientePaso].position, velocidadMovimiento * Time.deltaTime);
 
-        if (Vector2.Distance(transform.position, puntosMovimiento[numeroAleatorio].position) < distanciaMinima)
+        if (Vector2.Distance(transform.position, puntosMovimiento[siguientePaso].position) < distanciaMinima)
         {
-            numeroAleatorio = Random.Range(0, puntosMovimiento.Length);
+            siguientePaso += 1;
+            if(siguientePaso >= puntosMovimiento.Length)
+            {
+                siguientePaso = 0;
+            }
             Girar();
         }
     }
 
     private void Girar()
     {
-        if (transform.position.x < puntosMovimiento[numeroAleatorio].position.x)
+        if (transform.position.x < puntosMovimiento[siguientePaso].position.x)
         {
             spriteRenderer.flipX = true;
         }
