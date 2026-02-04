@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0b471bf8bc1a6f14186144a76323c873
+guid: 053cd4d9e8e1f5e45ab92fe778f6bd41
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -83,7 +83,7 @@ ScriptedImporter:
       y: 0
       width: 0
       height: 0
-    spriteID: 13bcd98f7aec35f4da9f81e71fa67029
+    spriteID: 0c4735a486ce3e24ab67a7354a8c672b
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -95,7 +95,7 @@ ScriptedImporter:
     spritePosition: {x: 0, y: 0}
   multiSpriteImportData: []
   layeredSpriteImportData:
-  - name: Ladder
+  - name: ParallaxVer.2
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -105,9 +105,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 232
-      height: 321
-    spriteID: 8012d748ba1d49d4d908c8bd90b44946
+      width: 640
+      height: 53
+    spriteID: 78d94c60431178145870c82d27c6b9af
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -116,7 +116,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-    spritePosition: {x: 44, y: 0}
+    spritePosition: {x: 0, y: 0}
   spriteImportData: []
   rigSpriteImportData: []
   sharedRigSpriteImportData: []
@@ -236,76 +236,46 @@ ScriptedImporter:
   resliceFromLayer: 0
   pSDLayerImportSetting: []
   psdLayers:
-  - name: Ladder
-    spriteName: Ladder
+  - name: ParallaxVer.2
+    spriteName: ParallaxVer.2
     isGroup: 0
     parentIndex: -1
-    spriteID: 8012d748ba1d49d4d908c8bd90b44946
-    layerID: 15
+    spriteID: 78d94c60431178145870c82d27c6b9af
+    layerID: 13
     mosaicPosition: {x: 4, y: 4}
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: Ladder
+  - name: Parallax
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: fc604fcf96e43a64b91b78a9a4eeb8d7
+    spriteID: 0a48fa5c7059ce541a295ba80f2fbaf5
     layerID: 4
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
     isImported: 0
     isVisible: 0
-  - name: Layer 3
+  - name: Sombra1
     spriteName: 
     isGroup: 0
     parentIndex: 1
-    spriteID: cd639971211e6af40a3557ccc2843596
-    layerID: 9
+    spriteID: 12ef9cea29b126c46832f62842b0b996
+    layerID: 5
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
     isImported: 0
     isVisible: 1
-  - name: Layer 2
+  - name: Base1
     spriteName: 
     isGroup: 0
     parentIndex: 1
-    spriteID: 0ab0e1ef71a974646aa40d32b527c045
-    layerID: 8
-    mosaicPosition: {x: 0, y: 0}
-    flatten: 0
-    isImported: 0
-    isVisible: 1
-  - name: Layer 1
-    spriteName: 
-    isGroup: 0
-    parentIndex: 1
-    spriteID: 8224620834a16e8488f81ab73815f6ce
-    layerID: 6
-    mosaicPosition: {x: 0, y: 0}
-    flatten: 0
-    isImported: 0
-    isVisible: 1
-  - name: Base
-    spriteName: 
-    isGroup: 0
-    parentIndex: 1
-    spriteID: 005b8d5c8e3209846bfaefa3ef35190e
+    spriteID: a6d781386dada5a4cb72d914d2008360
     layerID: 3
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
     isImported: 0
     isVisible: 1
-  - name: Fondo
-    spriteName: 
-    isGroup: 0
-    parentIndex: -1
-    spriteID: f948fe3b0da9f2c4b8e42ada1e39b95d
-    layerID: 2
-    mosaicPosition: {x: 0, y: 0}
-    flatten: 0
-    isImported: 0
-    isVisible: 0
   mosaicPSDLayers: []
   rigPSDLayers: []
   sharedRigPSDLayers: []
