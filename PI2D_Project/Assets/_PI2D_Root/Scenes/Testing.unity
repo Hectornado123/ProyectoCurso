@@ -3229,9 +3229,37 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2022130447230468685, guid: 1c6b2074b5631fb45b3242d55e3586d7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7594204
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022130447230468685, guid: 1c6b2074b5631fb45b3242d55e3586d7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.65060025
+      objectReference: {fileID: 0}
+    - target: {fileID: 3577987936059631498, guid: 1c6b2074b5631fb45b3242d55e3586d7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.09798867
+      objectReference: {fileID: 0}
+    - target: {fileID: 3577987936059631498, guid: 1c6b2074b5631fb45b3242d55e3586d7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.9951875
+      objectReference: {fileID: 0}
+    - target: {fileID: 3852909943786713426, guid: 1c6b2074b5631fb45b3242d55e3586d7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.032003585
+      objectReference: {fileID: 0}
+    - target: {fileID: 3852909943786713426, guid: 1c6b2074b5631fb45b3242d55e3586d7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.99948776
+      objectReference: {fileID: 0}
     - target: {fileID: 5044176436282500693, guid: 1c6b2074b5631fb45b3242d55e3586d7, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5975579907864798866, guid: 1c6b2074b5631fb45b3242d55e3586d7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.00000017647358
       objectReference: {fileID: 0}
     - target: {fileID: 6253417864968601142, guid: 1c6b2074b5631fb45b3242d55e3586d7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3272,6 +3300,14 @@ PrefabInstance:
     - target: {fileID: 6253417864968601142, guid: 1c6b2074b5631fb45b3242d55e3586d7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7549324078698874421, guid: 1c6b2074b5631fb45b3242d55e3586d7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.6533973
+      objectReference: {fileID: 0}
+    - target: {fileID: 7549324078698874421, guid: 1c6b2074b5631fb45b3242d55e3586d7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7570152
       objectReference: {fileID: 0}
     - target: {fileID: 7708482397903782955, guid: 1c6b2074b5631fb45b3242d55e3586d7, type: 3}
       propertyPath: tr
