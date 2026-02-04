@@ -1,70 +1,75 @@
 using System.Collections;
 using UnityEngine;
-using TMPro;
 
-public class GuillotinaRotatoria : MonoBehaviour
+public class SawPendulo : MonoBehaviour
 {
-
-
-  
+    [Header("Tiempo")]
     public float intervalo = 6f;
-    public float anguloRotacion = 170f;
-    public float velocidadRotacion = 2f;
 
-    public TextMeshProUGUI contadorTexto;
+    [Header("Movimiento")]
+    public float anguloMaximo = 85f; // 85 + 85 = 170 total
+    public float velocidad = 6f;
 
-    private float tiempoRestante;
-    private Quaternion rotacionInicial;
-    private bool atacando = false;
+    [Header("Easing")]
+    public AnimationCurve curva;
 
-    public Transform saw; // referencia a la guillotina
+    private float tiempo;
+    private Quaternion rotIzquierda;
+    private Quaternion rotDerecha;
+    private bool moviendo = false;
+    private bool haciaDerecha = true;
 
     void Start()
     {
-        saw = GameObject.Find("Saw").transform; // BUSCA EL OBJETO Saw
-        rotacionInicial = saw.rotation;
-        tiempoRestante = intervalo;
+        tiempo = intervalo;
+
+        // Rotaciones
+        rotIzquierda = Quaternion.Euler(0, 0, anguloMaximo);
+        rotDerecha = Quaternion.Euler(0, 0, -anguloMaximo);
+
+        // Curva default si no pusiste nada
+        if (curva == null || curva.length == 0)
+            curva = AnimationCurve.EaseInOut(0, 0, 1, 1);
+
+        // Empieza en izquierda
+        transform.rotation = rotIzquierda;
     }
 
     void Update()
     {
-        Debug.Log("Update funcionando");
-        tiempoRestante -= Time.deltaTime;
+        tiempo -= Time.deltaTime;
 
-        contadorTexto.text = tiempoRestante.ToString("F1") + "s";
-
-        if (tiempoRestante <= 0 && !atacando)
+        if (tiempo <= 0 && !moviendo)
         {
-            StartCoroutine(Ataque());
-            tiempoRestante = intervalo;
+            StartCoroutine(Oscilar());
+            tiempo = intervalo;
         }
     }
 
-    IEnumerator Ataque()
+    IEnumerator Oscilar()
     {
-        atacando = true;
+        moviendo = true;
 
-        Quaternion rotObjetivo = rotacionInicial * Quaternion.Euler(0, 0, -anguloRotacion);
+        Quaternion desde = haciaDerecha ? rotIzquierda : rotDerecha;
+        Quaternion hacia = haciaDerecha ? rotDerecha : rotIzquierda;
+
         float t = 0;
-
         while (t < 1)
         {
-            t += Time.deltaTime * velocidadRotacion;
-            saw.rotation = Quaternion.Lerp(rotacionInicial, rotObjetivo, t);
+            t += Time.deltaTime * velocidad;
+            float curvaValor = curva.Evaluate(t);
+            transform.rotation = Quaternion.Lerp(desde, hacia, curvaValor);
             yield return null;
         }
 
-        yield return new WaitForSeconds(0.1f);
-
-        t = 0;
-        while (t < 1)
-        {
-            t += Time.deltaTime * velocidadRotacion;
-            saw.rotation = Quaternion.Lerp(rotObjetivo, rotacionInicial, t);
-            yield return null;
-        }
-
-        atacando = false;
+        haciaDerecha = !haciaDerecha;
+        moviendo = false;
     }
-    
+    public Collider2D hitbox;
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+            Debug.Log("MUERTE");
+    }
 }
