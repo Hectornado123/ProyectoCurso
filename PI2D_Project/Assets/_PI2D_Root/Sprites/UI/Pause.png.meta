@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 3d6a83b6ff0a2c641a42d60a8941b0e6
+guid: 249af70a87bd9b84a9909fecaca0b5bc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5833429208363724465
-    second: Cielo_0
+      213: -7762350047352875558
+    second: Pause_0
+  - first:
+      213: 7690072442612862611
+    second: Pause_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -152,13 +155,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cielo_0
+      name: Pause_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 640
-        height: 320
+        x: 71
+        y: 59
+        width: 57
+        height: 204
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,8 +170,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f419715ba0f7b0fa0800000000000000
-      internalID: -5833429208363724465
+      spriteID: ad59b4532c7964490800000000000000
+      internalID: -7762350047352875558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pause_1
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 58
+        width: 57
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39ec5fe8420a8ba60800000000000000
+      internalID: 7690072442612862611
       vertices: []
       indices: 
       edges: []
@@ -187,7 +212,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Cielo_0: -5833429208363724465
+      Pause_0: -7762350047352875558
+      Pause_1: 7690072442612862611
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3284c13ef92c75d4b87adc16caecff36
+guid: 5d12d59903e78d948a0e308a598d8ed4
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -83,7 +83,7 @@ ScriptedImporter:
       y: 0
       width: 0
       height: 0
-    spriteID: 82f43e79bea8021478a2019ab7af9880
+    spriteID: f08c4f87d17114147a67e756c5fe8094
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -95,7 +95,7 @@ ScriptedImporter:
     spritePosition: {x: 0, y: 0}
   multiSpriteImportData: []
   layeredSpriteImportData:
-  - name: Jarron1
+  - name: Layer 19
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -105,9 +105,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 115
-      height: 194
-    spriteID: d6c38b1710e2f6d4fb4c6940be192ed1
+      width: 299
+      height: 150
+    spriteID: 2c1a88150ba84bd48b3af440a457643a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -116,7 +116,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-    spritePosition: {x: 81, y: 0}
+    spritePosition: {x: 7, y: 95}
   spriteImportData: []
   rigSpriteImportData: []
   sharedRigSpriteImportData: []
@@ -236,16 +236,96 @@ ScriptedImporter:
   resliceFromLayer: 0
   pSDLayerImportSetting: []
   psdLayers:
-  - name: Jarron1
-    spriteName: Jarron1
+  - name: Pilar
+    spriteName: 
     isGroup: 0
     parentIndex: -1
-    spriteID: d6c38b1710e2f6d4fb4c6940be192ed1
-    layerID: 2
+    spriteID: 54e7fcdf1936c204788086cce6b0cb70
+    layerID: 6
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Caja
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 5b626023a9100a44695fc080d4cbd95b
+    layerID: 11
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Caja
+    spriteName: 
+    isGroup: 0
+    parentIndex: 1
+    spriteID: 5df3300bd8779df418a2a8b767ba2ef6
+    layerID: 5
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Planta
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: cb19be9cf9ad0404db3350478c956207
+    layerID: 9
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Planta
+    spriteName: 
+    isGroup: 0
+    parentIndex: 3
+    spriteID: 8f9a83dfa95756141b5cc763c6568984
+    layerID: 4
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Piedra
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 4a7e9d26ee46e4348ad46672df263eae
+    layerID: 7
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 19
+    spriteName: Layer 19
+    isGroup: 0
+    parentIndex: 5
+    spriteID: 2c1a88150ba84bd48b3af440a457643a
+    layerID: 35
     mosaicPosition: {x: 4, y: 4}
     flatten: 0
     isImported: 1
     isVisible: 1
+  - name: Layer 7
+    spriteName: 
+    isGroup: 0
+    parentIndex: 5
+    spriteID: b4df2dbf8147e6c40a2262383ad981b9
+    layerID: 19
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Fondo
+    spriteName: 
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 63c3f2004e7b2d2428dd0f44939ae3d6
+    layerID: 2
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
   mosaicPSDLayers: []
   rigPSDLayers: []
   sharedRigPSDLayers: []

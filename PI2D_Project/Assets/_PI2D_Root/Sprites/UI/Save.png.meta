@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3d6a83b6ff0a2c641a42d60a8941b0e6
+guid: 2fafcc8bfd85b1c4299c70906da86f1d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5833429208363724465
-    second: Cielo_0
+      213: -522367714226421056
+    second: Save_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -152,13 +152,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cielo_0
+      name: Save_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 640
-        height: 320
+        x: 54
+        y: 33
+        width: 238
+        height: 252
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,8 +167,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f419715ba0f7b0fa0800000000000000
-      internalID: -5833429208363724465
+      spriteID: 0c2c66fd45d20c8f0800000000000000
+      internalID: -522367714226421056
       vertices: []
       indices: 
       edges: []
@@ -187,7 +187,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Cielo_0: -5833429208363724465
+      Save_0: -522367714226421056
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

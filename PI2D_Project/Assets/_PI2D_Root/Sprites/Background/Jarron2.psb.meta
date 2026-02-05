@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3284c13ef92c75d4b87adc16caecff36
+guid: 356692fd6084e4143ba5115c42fecb4f
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -83,7 +83,7 @@ ScriptedImporter:
       y: 0
       width: 0
       height: 0
-    spriteID: 82f43e79bea8021478a2019ab7af9880
+    spriteID: 542b2ded2a5a4634cac5ca22d90c50c2
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -95,7 +95,7 @@ ScriptedImporter:
     spritePosition: {x: 0, y: 0}
   multiSpriteImportData: []
   layeredSpriteImportData:
-  - name: Jarron1
+  - name: Layer 2
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -105,9 +105,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 115
+      width: 278
       height: 194
-    spriteID: d6c38b1710e2f6d4fb4c6940be192ed1
+    spriteID: dab481e4264a4dc4faf85da30947be07
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -116,7 +116,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-    spritePosition: {x: 81, y: 0}
+    spritePosition: {x: 491, y: 481}
   spriteImportData: []
   rigSpriteImportData: []
   sharedRigSpriteImportData: []
@@ -236,11 +236,11 @@ ScriptedImporter:
   resliceFromLayer: 0
   pSDLayerImportSetting: []
   psdLayers:
-  - name: Jarron1
-    spriteName: Jarron1
+  - name: Layer 2
+    spriteName: Layer 2
     isGroup: 0
     parentIndex: -1
-    spriteID: d6c38b1710e2f6d4fb4c6940be192ed1
+    spriteID: dab481e4264a4dc4faf85da30947be07
     layerID: 2
     mosaicPosition: {x: 4, y: 4}
     flatten: 0
