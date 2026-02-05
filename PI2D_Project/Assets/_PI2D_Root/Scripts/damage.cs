@@ -3,7 +3,7 @@
 public class PlayerHealth : MonoBehaviour
 {
     public int vidaMaxima = 3;
-    public int vidaActual;
+    public int vidaActual = 3;
 
     void Start()
     {
@@ -15,25 +15,30 @@ public class PlayerHealth : MonoBehaviour
     {
         if (other.CompareTag("enemigo"))
         {
-            QuitarVida(1);
+            vidaActual--;
+            
+            
+            //QuitarVida(1);
         }
 
         if (other.CompareTag("filo"))
         {
-            QuitarVida(3);
+            vidaActual = 0;
         }
-    }
-
-    void QuitarVida(int cantidad)
-    {
-        vidaActual -= cantidad;
-        Debug.Log("Daño recibido: " + cantidad + " | Vida: " + vidaActual);
 
         if (vidaActual <= 0)
         {
             Morir();
         }
     }
+
+   // void QuitarVida(int cantidad)
+   // {
+  //      vidaActual -= cantidad;
+      //  Debug.Log("Daño recibido: " + cantidad + " | Vida: " + vidaActual);
+
+      
+   // }
 
     void Morir()
     {
