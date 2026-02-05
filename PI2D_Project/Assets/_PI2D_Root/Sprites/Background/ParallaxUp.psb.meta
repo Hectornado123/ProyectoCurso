@@ -83,7 +83,7 @@ ScriptedImporter:
       y: 0
       width: 0
       height: 0
-    spriteID: 7b2fb5ba5f955b147a9b5040f4edd0be
+    spriteID: e715cb136b595114ea19ee35bdbc813a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -107,7 +107,7 @@ ScriptedImporter:
       y: 4
       width: 640
       height: 53
-    spriteID: 426e59fb17bec2f4c9f3d4dd2160896a
+    spriteID: 1ba76ba8ecac9d745b7d24249daa09be
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -116,7 +116,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-    spritePosition: {x: 0, y: 267}
+    spritePosition: {x: 0, y: 107}
   spriteImportData: []
   rigSpriteImportData: []
   sharedRigSpriteImportData: []
@@ -240,7 +240,7 @@ ScriptedImporter:
     spriteName: Up
     isGroup: 0
     parentIndex: -1
-    spriteID: 426e59fb17bec2f4c9f3d4dd2160896a
+    spriteID: 1ba76ba8ecac9d745b7d24249daa09be
     layerID: 5
     mosaicPosition: {x: 4, y: 4}
     flatten: 0
