@@ -47,7 +47,7 @@ public class PlayerHealth : MonoBehaviour
     {
         Debug.Log("💀 PLAYER MUERTO");
         // Respawn
-        Respawn.Respaawn();
+        Respawn.RespawnPlayer();
 
         // Resetear vida
         vidaActual = vidaMaxima;
