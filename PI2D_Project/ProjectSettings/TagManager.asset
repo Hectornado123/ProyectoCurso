@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Escaleras
   - CamConfiner
+  - enemigo
+  - filo
   layers:
   - Default
   - TransparentFX
@@ -42,6 +44,15 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: background
+    uniqueID: 1392115071
+    locked: 0
+  - name: mid
+    uniqueID: 2434839165
+    locked: 0
+  - name: parallax
+    uniqueID: 2129259475
     locked: 0
   m_RenderingLayers:
   - Default

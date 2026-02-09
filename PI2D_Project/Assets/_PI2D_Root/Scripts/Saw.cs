@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Saw_Rotation : MonoBehaviour
+public class Saw : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

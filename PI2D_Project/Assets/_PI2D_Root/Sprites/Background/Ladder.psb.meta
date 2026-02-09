@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a1dcdf430c1845c488b6278bc830824c
+guid: 0b471bf8bc1a6f14186144a76323c873
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -83,7 +83,7 @@ ScriptedImporter:
       y: 0
       width: 0
       height: 0
-    spriteID: b9c9abadc585ec94595da64def087b54
+    spriteID: 13bcd98f7aec35f4da9f81e71fa67029
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -95,51 +95,7 @@ ScriptedImporter:
     spritePosition: {x: 0, y: 0}
   multiSpriteImportData: []
   layeredSpriteImportData:
-  - name: Layer 2
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    customData: 
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 662
-      width: 220
-      height: 321
-    spriteID: b5fe3c45848d3bc4ea517225f6c563c1
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 662}
-    spritePosition: {x: 71, y: 0}
-  - name: Layer 1
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    customData: 
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 333
-      width: 228
-      height: 321
-    spriteID: 700964d8d92a733438f8415a825be5bf
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 333}
-    spritePosition: {x: 65, y: 0}
-  - name: Base
+  - name: Ladder
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -151,7 +107,7 @@ ScriptedImporter:
       y: 4
       width: 232
       height: 321
-    spriteID: e1f3e027c66bada46813020bbc5a536f
+    spriteID: 8012d748ba1d49d4d908c8bd90b44946
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -160,7 +116,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-    spritePosition: {x: 61, y: 0}
+    spritePosition: {x: 44, y: 0}
   spriteImportData: []
   rigSpriteImportData: []
   sharedRigSpriteImportData: []
@@ -281,50 +237,70 @@ ScriptedImporter:
   pSDLayerImportSetting: []
   psdLayers:
   - name: Ladder
+    spriteName: Ladder
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 8012d748ba1d49d4d908c8bd90b44946
+    layerID: 15
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Ladder
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 0347eb0ad9177da4f86a09cf63f67bea
+    spriteID: fc604fcf96e43a64b91b78a9a4eeb8d7
     layerID: 4
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Layer 3
+    spriteName: 
+    isGroup: 0
+    parentIndex: 1
+    spriteID: cd639971211e6af40a3557ccc2843596
+    layerID: 9
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
     isImported: 0
     isVisible: 1
   - name: Layer 2
-    spriteName: Layer 2
+    spriteName: 
     isGroup: 0
-    parentIndex: 0
-    spriteID: b5fe3c45848d3bc4ea517225f6c563c1
-    layerID: 7
-    mosaicPosition: {x: 4, y: 662}
+    parentIndex: 1
+    spriteID: 0ab0e1ef71a974646aa40d32b527c045
+    layerID: 8
+    mosaicPosition: {x: 0, y: 0}
     flatten: 0
-    isImported: 1
+    isImported: 0
     isVisible: 1
   - name: Layer 1
-    spriteName: Layer 1
+    spriteName: 
     isGroup: 0
-    parentIndex: 0
-    spriteID: 700964d8d92a733438f8415a825be5bf
+    parentIndex: 1
+    spriteID: 8224620834a16e8488f81ab73815f6ce
     layerID: 6
-    mosaicPosition: {x: 4, y: 333}
+    mosaicPosition: {x: 0, y: 0}
     flatten: 0
-    isImported: 1
+    isImported: 0
     isVisible: 1
   - name: Base
-    spriteName: Base
+    spriteName: 
     isGroup: 0
-    parentIndex: 0
-    spriteID: e1f3e027c66bada46813020bbc5a536f
+    parentIndex: 1
+    spriteID: 005b8d5c8e3209846bfaefa3ef35190e
     layerID: 3
-    mosaicPosition: {x: 4, y: 4}
+    mosaicPosition: {x: 0, y: 0}
     flatten: 0
-    isImported: 1
+    isImported: 0
     isVisible: 1
   - name: Fondo
     spriteName: 
     isGroup: 0
     parentIndex: -1
-    spriteID: 1b9a14b20fb550b4a873743fc4a18fdb
+    spriteID: f948fe3b0da9f2c4b8e42ada1e39b95d
     layerID: 2
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
