@@ -1,16 +1,22 @@
+﻿using UnityEngine;
 using UnityEngine;
 
 public class RadarTexto : MonoBehaviour
 {
-    public GameObject textoCanvas; // Canvas con el texto
+    [SerializeField] private GameObject textoCanvas;
 
-    private void Start()
+    private void Awake()
     {
-        textoCanvas.SetActive(false);
+        if (textoCanvas != null)
+            textoCanvas.SetActive(false);
+        else
+            Debug.LogError("❌ TextoCanvas NO está asignado en el Inspector", this);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (!textoCanvas) return;
+
         if (other.CompareTag("Player"))
         {
             textoCanvas.SetActive(true);
@@ -19,6 +25,8 @@ public class RadarTexto : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
+        if (!textoCanvas) return;
+
         if (other.CompareTag("Player"))
         {
             textoCanvas.SetActive(false);
