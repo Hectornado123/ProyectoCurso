@@ -1529,7 +1529,7 @@ MonoBehaviour:
   tr: {fileID: 0}
   speed: 7
   velocidadEscalar: 0
-  jumpForce: 7
+  jumpForce: 9
   dashPower: 25
   dashDuration: 0.4
   dashCooldown: 1
