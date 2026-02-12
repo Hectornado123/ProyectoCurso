@@ -1080,10 +1080,6 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: -1860128131
       objectReference: {fileID: 0}
-    - target: {fileID: 1013654815737992004, guid: 1c6b2074b5631fb45b3242d55e3586d7, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.00000016027681
-      objectReference: {fileID: 0}
     - target: {fileID: 1798545943339910493, guid: 1c6b2074b5631fb45b3242d55e3586d7, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -1247,13 +1243,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5044176436282500693, guid: 1c6b2074b5631fb45b3242d55e3586d7, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1971202845}
-    - targetCorrespondingSourceObject: {fileID: 5044176436282500693, guid: 1c6b2074b5631fb45b3242d55e3586d7, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1971202844}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c6b2074b5631fb45b3242d55e3586d7, type: 3}
 --- !u!1 &529714750
 GameObject:
@@ -3327,7 +3317,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 744993079458331953, guid: c8aede41c2d413e4a97bd5bf48c6a7bc, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.49350208
+      value: 0.4696912
       objectReference: {fileID: 0}
     - target: {fileID: 919875906888547204, guid: c8aede41c2d413e4a97bd5bf48c6a7bc, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3363,19 +3353,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1353002485696766062, guid: c8aede41c2d413e4a97bd5bf48c6a7bc, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.8934571
+      value: 0.9045847
       objectReference: {fileID: 0}
     - target: {fileID: 1353002485696766062, guid: c8aede41c2d413e4a97bd5bf48c6a7bc, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.44914863
+      value: -0.426294
       objectReference: {fileID: 0}
     - target: {fileID: 1642659878429978815, guid: c8aede41c2d413e4a97bd5bf48c6a7bc, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.44380212
+      value: 0.44537014
       objectReference: {fileID: 0}
     - target: {fileID: 1642659878429978815, guid: c8aede41c2d413e4a97bd5bf48c6a7bc, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.89612484
+      value: -0.8953466
       objectReference: {fileID: 0}
     - target: {fileID: 1712444968518471072, guid: c8aede41c2d413e4a97bd5bf48c6a7bc, type: 3}
       propertyPath: m_SortingLayer
@@ -3768,11 +3758,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1971202835 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5044176436282500693, guid: 1c6b2074b5631fb45b3242d55e3586d7, type: 3}
-  m_PrefabInstance: {fileID: 510473528}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1971202836 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6253417864968601142, guid: 1c6b2074b5631fb45b3242d55e3586d7, type: 3}
@@ -3783,32 +3768,6 @@ TrailRenderer:
   m_CorrespondingSourceObject: {fileID: 8457441911729018183, guid: 1c6b2074b5631fb45b3242d55e3586d7, type: 3}
   m_PrefabInstance: {fileID: 510473528}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1971202844
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1971202835}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baff6b7e84f95ea43a0379470f004b49, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
-  vidaMaxima: 3
-  vidaActual: 3
---- !u!114 &1971202845
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1971202835}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20332fd15f488484b873f7f9488122a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Respawn
 --- !u!1 &1979904160
 GameObject:
   m_ObjectHideFlags: 0
