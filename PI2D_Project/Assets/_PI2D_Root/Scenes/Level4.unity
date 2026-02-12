@@ -331,6 +331,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SawCeiling (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 9106436183238101449, guid: 41fd05b17a3e8a5428422903a46c55ba, type: 3}
+      propertyPath: m_TagString
+      value: filo
+      objectReference: {fileID: 0}
+    - target: {fileID: 9199481939937033138, guid: 41fd05b17a3e8a5428422903a46c55ba, type: 3}
+      propertyPath: m_TagString
+      value: filo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -974,15 +982,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1581728134382937646, guid: 5fe8924dff6a3fc4ab10c718db83075e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 32.277813
+      value: 5.334755
       objectReference: {fileID: 0}
     - target: {fileID: 1581728134382937646, guid: 5fe8924dff6a3fc4ab10c718db83075e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -17.739489
+      value: 1.9805088
       objectReference: {fileID: 0}
     - target: {fileID: 1581728134382937646, guid: 5fe8924dff6a3fc4ab10c718db83075e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -20.085058
+      value: -20.00747
       objectReference: {fileID: 0}
     - target: {fileID: 1581728134382937646, guid: 5fe8924dff6a3fc4ab10c718db83075e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1680,6 +1688,10 @@ PrefabInstance:
       value: SawCeiling (9)
       objectReference: {fileID: 0}
     - target: {fileID: 9106436183238101449, guid: 41fd05b17a3e8a5428422903a46c55ba, type: 3}
+      propertyPath: m_TagString
+      value: filo
+      objectReference: {fileID: 0}
+    - target: {fileID: 9199481939937033138, guid: 41fd05b17a3e8a5428422903a46c55ba, type: 3}
       propertyPath: m_TagString
       value: filo
       objectReference: {fileID: 0}
@@ -2596,6 +2608,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SawCeiling (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 9106436183238101449, guid: 41fd05b17a3e8a5428422903a46c55ba, type: 3}
+      propertyPath: m_TagString
+      value: filo
+      objectReference: {fileID: 0}
+    - target: {fileID: 9199481939937033138, guid: 41fd05b17a3e8a5428422903a46c55ba, type: 3}
+      propertyPath: m_TagString
+      value: filo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3000,15 +3020,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1013654815737992004, guid: 1c6b2074b5631fb45b3242d55e3586d7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.00000010386724
+      value: -0.00000016027681
       objectReference: {fileID: 0}
     - target: {fileID: 2022130447230468685, guid: 1c6b2074b5631fb45b3242d55e3586d7, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.75942045
+      value: 0.7594204
       objectReference: {fileID: 0}
     - target: {fileID: 2022130447230468685, guid: 1c6b2074b5631fb45b3242d55e3586d7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.6506002
+      value: 0.65060025
       objectReference: {fileID: 0}
     - target: {fileID: 3577987936059631498, guid: 1c6b2074b5631fb45b3242d55e3586d7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3032,7 +3052,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5975579907864798866, guid: 1c6b2074b5631fb45b3242d55e3586d7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000002007916
+      value: 0.0000000978487
       objectReference: {fileID: 0}
     - target: {fileID: 6253417864968601142, guid: 1c6b2074b5631fb45b3242d55e3586d7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3040,7 +3060,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6253417864968601142, guid: 1c6b2074b5631fb45b3242d55e3586d7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -24.2
+      value: -4.48
       objectReference: {fileID: 0}
     - target: {fileID: 6253417864968601142, guid: 1c6b2074b5631fb45b3242d55e3586d7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3076,11 +3096,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7549324078698874421, guid: 1c6b2074b5631fb45b3242d55e3586d7, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.65339744
+      value: 0.6533974
       objectReference: {fileID: 0}
     - target: {fileID: 7549324078698874421, guid: 1c6b2074b5631fb45b3242d55e3586d7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.757015
+      value: 0.75701517
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3641,7 +3661,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5356755193370485521, guid: 3c34cb6a8343fa041ab9bcbdfde10c08, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -17.739489
+      value: 1.9805121
       objectReference: {fileID: 0}
     - target: {fileID: 5356755193370485521, guid: 3c34cb6a8343fa041ab9bcbdfde10c08, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3847,6 +3867,14 @@ PrefabInstance:
     - target: {fileID: 8744080295919381639, guid: 41fd05b17a3e8a5428422903a46c55ba, type: 3}
       propertyPath: m_Name
       value: SawCeiling (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106436183238101449, guid: 41fd05b17a3e8a5428422903a46c55ba, type: 3}
+      propertyPath: m_TagString
+      value: filo
+      objectReference: {fileID: 0}
+    - target: {fileID: 9199481939937033138, guid: 41fd05b17a3e8a5428422903a46c55ba, type: 3}
+      propertyPath: m_TagString
+      value: filo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4452,6 +4480,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SawCeiling (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 9106436183238101449, guid: 41fd05b17a3e8a5428422903a46c55ba, type: 3}
+      propertyPath: m_TagString
+      value: filo
+      objectReference: {fileID: 0}
+    - target: {fileID: 9199481939937033138, guid: 41fd05b17a3e8a5428422903a46c55ba, type: 3}
+      propertyPath: m_TagString
+      value: filo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4600,6 +4636,14 @@ PrefabInstance:
     - target: {fileID: 8744080295919381639, guid: 41fd05b17a3e8a5428422903a46c55ba, type: 3}
       propertyPath: m_Name
       value: SawCeiling (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106436183238101449, guid: 41fd05b17a3e8a5428422903a46c55ba, type: 3}
+      propertyPath: m_TagString
+      value: filo
+      objectReference: {fileID: 0}
+    - target: {fileID: 9199481939937033138, guid: 41fd05b17a3e8a5428422903a46c55ba, type: 3}
+      propertyPath: m_TagString
+      value: filo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5717,6 +5761,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SawCeiling (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 9106436183238101449, guid: 41fd05b17a3e8a5428422903a46c55ba, type: 3}
+      propertyPath: m_TagString
+      value: filo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 935059471628910536, guid: 41fd05b17a3e8a5428422903a46c55ba, type: 3}
@@ -6113,7 +6161,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -36.01458, y: -16.845694}
+  m_Offset: {x: -67.32798, y: -16.845694}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -6123,7 +6171,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 310.4431, y: 49.16885}
+  m_Size: {x: 315.30548, y: 49.16885}
   m_EdgeRadius: 0
 --- !u!4 &2102738517
 Transform:
@@ -6267,6 +6315,10 @@ PrefabInstance:
     - target: {fileID: 1179252784105735228, guid: 7dd0bb99c1e1caf42a5dab842fdf037d, type: 3}
       propertyPath: anguloMaximo
       value: 110
+      objectReference: {fileID: 0}
+    - target: {fileID: 4380747802328309869, guid: 7dd0bb99c1e1caf42a5dab842fdf037d, type: 3}
+      propertyPath: m_TagString
+      value: filo
       objectReference: {fileID: 0}
     - target: {fileID: 6735834578352298555, guid: 7dd0bb99c1e1caf42a5dab842fdf037d, type: 3}
       propertyPath: m_LocalScale.x
