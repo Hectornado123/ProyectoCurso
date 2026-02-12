@@ -6421,6 +6421,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SawCeiling
       objectReference: {fileID: 0}
+    - target: {fileID: 9199481939937033138, guid: 41fd05b17a3e8a5428422903a46c55ba, type: 3}
+      propertyPath: m_TagString
+      value: filo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 950911265859210675, guid: 41fd05b17a3e8a5428422903a46c55ba, type: 3}
