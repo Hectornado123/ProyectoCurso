@@ -9,6 +9,15 @@ EditorBuildSettings:
     path: Assets/_PI2D_Root/Scenes/Menu.unity
     guid: 9e559d5b041e2884fb12603772e859b0
   - enabled: 1
+    path: Assets/_PI2D_Root/Scenes/Level1.unity
+    guid: c630373fc20df524486f14a61c4789bd
+  - enabled: 1
+    path: Assets/_PI2D_Root/Scenes/Level3.unity
+    guid: 139a79ef361cab8488693738a1391413
+  - enabled: 1
+    path: Assets/_PI2D_Root/Scenes/Level4.unity
+    guid: 2ec22cfc58bb1bf45a6c47a15a5bda44
+  - enabled: 0
     path: Assets/_PI2D_Root/Scenes/Demo.unity
     guid: fcd12562a38cb1c40a186f030ceff7ce
   m_configObjects:

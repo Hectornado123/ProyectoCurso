@@ -5,35 +5,34 @@ public class Escorpion : MonoBehaviour
     public float speed = 2f;
     public Transform puntoA;
     public Transform puntoB;
-    public float distanciaMinima = 0.05f;
+    public float distanciaMinima = 0.1f;
 
     private Rigidbody2D rb;
-    private SpriteRenderer spriteRenderer;
+    private Animator animator;
     private Transform objetivo;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        objetivo = puntoB; // Empezar hacia B
+        animator = GetComponent<Animator>();
+        objetivo = puntoB;
     }
 
     void FixedUpdate()
     {
         if (puntoA == null || puntoB == null) return;
 
-        // Calcula dirección
-        float direccion = objetivo.position.x > transform.position.x ? 1f : -1f;
+        // Dirección hacia el objetivo
+        Vector2 direccion = (objetivo.position - transform.position).normalized;
 
-        // Mueve al escorpión correctamente
-        rb.linearVelocity = new Vector2(direccion * speed, rb.linearVelocity.y);
+        // Movimiento solo en X
+        rb.linearVelocity = new Vector2(direccion.x * speed, rb.linearVelocity.y);
 
-        // Flip visual
-     
+        // Animación siempre activa
+        animator.SetBool("camina", true);
 
-        // Cambiar de objetivo si llegó al punto
-        if ((direccion > 0 && transform.position.x >= objetivo.position.x - distanciaMinima) ||
-            (direccion < 0 && transform.position.x <= objetivo.position.x + distanciaMinima))
+        // Si llegó al punto, cambiar objetivo
+        if (Vector2.Distance(transform.position, objetivo.position) <= distanciaMinima)
         {
             objetivo = (objetivo == puntoA) ? puntoB : puntoA;
         }
