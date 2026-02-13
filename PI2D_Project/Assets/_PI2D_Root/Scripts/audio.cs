@@ -26,6 +26,7 @@ public class PlayerJumpSound2D : MonoBehaviour
     void Jump()
     {
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+        audioSource.pitch = Random.Range(0.95f, 1.05f);
         audioSource.PlayOneShot(jumpSFX);
     }
 }
