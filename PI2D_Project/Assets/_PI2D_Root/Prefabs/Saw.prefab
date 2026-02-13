@@ -379,7 +379,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91f5bb2b0c52f2b45afb19ddfea2ccdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SawPendulo
-  intervalo: 6
+  intervalo: 3
   anguloMaximo: 80
   velocidad: 0.8
   curva:
